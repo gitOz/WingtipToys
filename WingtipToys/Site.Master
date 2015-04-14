@@ -59,6 +59,7 @@ In addition to the @Master directive, the master page also contains all of the t
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                         <!--  Add navigation option for productlist  -->
                         <li><a runat="server" href="~/ProductList">Products</a></li>
+                        <li><a runat="server" href="~/ShoppingCart" ID="cartCount">&nbsp;</a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>

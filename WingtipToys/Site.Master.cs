@@ -6,8 +6,9 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Linq;//Added via tutorial
-using WingtipToys.Models;//Added via tutorial
+using System.Linq;
+using WingtipToys.Models;
+using WingtipToys.Logic;
 
 namespace WingtipToys
 {
@@ -73,15 +74,15 @@ namespace WingtipToys
 
         }
 
-        /// <summary>
-        /// The above code is executed when any page that uses the master page is loaded in the browser. The ListView control 
-        /// (named "categoryList") that you added earlier in this tutorial uses model binding to select data. 
-        /// In the markup of the ListView control you set the control's SelectMethod property to the 
-        /// GetCategories method, shown above. The ListView control calls the GetCategories method at the 
-        /// appropriate time in the page life cycle and automatically binds the returned data. You will learn 
-        /// more about binding data in the next tutorial.
-        /// </summary>
-        /// Added Function below via tutorial "Linking the data control to the database"
+        protected void Page_PreRender(object sender, EventArgs e)
+        {
+            using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())
+            {
+                string cartStr = string.Format("Cart ({0})", usersShoppingCart.GetCount());
+                cartCount.InnerText = cartStr;
+            }
+        }
+
         public IQueryable<Category> GetCategories()
         {
             var _db = new WingtipToys.Models.ProductContext();
@@ -94,5 +95,4 @@ namespace WingtipToys
             Context.GetOwinContext().Authentication.SignOut();
         }
     }
-
 }
