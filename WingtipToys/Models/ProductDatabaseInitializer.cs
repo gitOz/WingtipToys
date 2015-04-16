@@ -20,7 +20,7 @@ namespace WingtipToys.Models
     /// DropCreateDatabaseIfModelChanges class. However for this tutorial series, 
     /// use the DropCreateDatabaseIfModelChanges class.
     /// </summary>
-    public class ProductDatabaseInitializer : DropCreateDatabaseIfModelChanges<ProductContext>
+    public class ProductDatabaseInitializer : DropCreateDatabaseAlways<ProductContext>
     {
         protected override void Seed( ProductContext context )
         {
@@ -55,6 +55,12 @@ namespace WingtipToys.Models
                 {
                     CategoryID = 5,
                     CategoryName = "Rockets"
+                },               
+                //Add new Category Motorcyles
+                new Category
+                {
+                    CategoryID = 6,
+                    CategoryName = "Motorcycles"
                 },
             };
 
@@ -211,6 +217,15 @@ namespace WingtipToys.Models
                     ImagePath="rocket.png",
                     UnitPrice = 122.95,
                     CategoryID = 5
+                },
+                new Product
+                {
+                    ProductID = 17,
+                    ProductName = "Motorcycle",
+                    Description = "Just your average death trap on two wheels now in toy form!",
+                    ImagePath="motorcycle.png",
+                    UnitPrice = 69.69,
+                    CategoryID = 6
                 }
             };
 

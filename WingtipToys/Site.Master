@@ -54,6 +54,7 @@ In addition to the @Master directive, the master page also contains all of the t
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
+                        <!-- To create a link for the user of the "canEdit" role, add the markup highlighted in yellow to the following unordered list <ul> element so that the list appears as follows: -->
                          <li><a runat="server" id="adminLink" visible="false" 
                               href="~/Admin/AdminPage">Admin</a></li>
                         <li><a runat="server" href="~/">Home</a></li>

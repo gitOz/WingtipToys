@@ -191,6 +191,7 @@
     <Content Include="Catalog\Images\carfast.png" />
     <Content Include="Catalog\Images\carfaster.png" />
     <Content Include="Catalog\Images\carracer.png" />
+    <Content Include="Catalog\Images\motorcycle.png" />
     <Content Include="Catalog\Images\planeace.png" />
     <Content Include="Catalog\Images\planeglider.png" />
     <Content Include="Catalog\Images\planepaper.png" />
@@ -207,6 +208,7 @@
     <Content Include="Catalog\Images\Thumbs\carfast.png" />
     <Content Include="Catalog\Images\Thumbs\carfaster.png" />
     <Content Include="Catalog\Images\Thumbs\carracer.png" />
+    <Content Include="Catalog\Images\Thumbs\motorcycle.png" />
     <Content Include="Catalog\Images\Thumbs\planeace.png" />
     <Content Include="Catalog\Images\Thumbs\planeglider.png" />
     <Content Include="Catalog\Images\Thumbs\planepaper.png" />
@@ -478,7 +480,7 @@
     </Compile>
     <Compile Include="Logic\AddProducts.cs" />
     <Compile Include="Logic\PayPalFunctions.cs" />
-    <Compile Include="Logic\RoleActions.cs" />
+    <Compile Include="Logic\RoleAction.cs" />
     <Compile Include="Logic\ShoppingCartActions.cs" />
     <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\Category.cs" />
